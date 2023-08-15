@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            background-color: rgb(215, 215,215);
+        }
+
+       
+    
+   
+
+    body {
+  font-family: "Lato", sans-serif;
+  background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0, 0, 0, 0.338)),url('avelialandscape.jpg'); 
+    background-repeat: no-repeat;
+    background-size: 1280px 470px;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fefefe;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: indigo;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: white;
+}
+
+
+
+.openbtn {
+  font-size: 28px;
+  cursor: pointer;
+  color: black;
+  padding: 10px 15px;
+  border: none;
+  background-color: white;
+  
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+.topnav {
+    background-color: #ffffff;
+    overflow: auto;
+    margin-left: -5px;
+    width: 1270px;
+    margin-top: -8px;
+    position: fixed;
+    margin-left: -10px;
+    
+   
+}
+
+.image {
+    height: 40px;
+    width: 300px;
+    margin-left: 5px;
+    
+}
+
+.image1 {
+    height: 420px;
+    width: 1265px;
+    margin-left: -10px;
+    
+}
+
+
+
+.div1{
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  height: 640px;
+  width: 600px;
+  margin-left: 10px;
+  box-shadow: 10px 10px 5px grey;
+  margin-top: 210px;
+}
+
+.div2 {
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  height: 640px;
+  width: 600px;
+  margin-left: 640px;
+  margin-top: -640px;
+  box-shadow: 10px 10px 5px grey;
+}
+
+.div3 {
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  width: 810px;
+  height: 350px;
+  margin-left: 10px;
+  box-shadow: 10px 10px 5px grey;
+
+}
+
+.div4 {
+  width: 250px;
+  height: 160px;
+  background-color: #444;
+  margin-top: -60px;
+  background-image: linear-gradient(blue, black, orangered);
+}
+
+.button1 {
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  width: 150px;
+  height: 50px;
+  font-family: oswald;
+  font-size: 20px;
+  margin-left: 40px;
+  cursor: pointer;
+}
+
+.button1:hover {
+  background-color: rgba(103, 171, 1);
+}
+.image2 {
+  border-radius: 10px;
+  height: 300px;
+  width: 600px;
+  margin-left: 0px;
+}
+
+.image3 {
+  border-radius: 10px;
+  height: 300px;
+  width: 600px;
+  margin-left: 0px;
+}
+
+
+
+.accordion {
+  max-height: 200px; /* Set the maximum height to make it scrollable */
+  overflow-y: auto; /* Add vertical scrollbar when content exceeds max-height */
+  margin-left: 40px;
+}
+
+.accordion-item {
+  border: 0px solid #000000;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  
+}
+
+.accordion-header {
+  background-color: rgb(255, 157, 52);
+  cursor: pointer;
+  height: 50px;
+  width: 720px;
+  border-radius: 5px;
+  font-family: oswald;
+  font-size: 18px;
+  padding: 5px;
+  
+  
+}
+
+.accordion-content {
+  display: none;
+  padding: 10px;
+  background-color: #f0f0f0;
+  width: 710px;
+  margin-left: 1px;
+  font-family: oswald;
+  
+  
+
+}
+
+/* Show the content when the accordion header is clicked */
+.accordion-item.active .accordion-content {
+  display: block;
+}
+
+i {
+  float: right;
+  
+}
+
+.fa{
+  font-size: 25px;
+  margin-top: 10px;
+  margin-right: 5px;
+}
+
+.lineUp {
+  animation: 2s anim-lineUp ease-out;
+}
+@keyframes anim-lineUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.search {
+  width: 220px;
+  height: 25px;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-top: 100px;
+  border: 2px solid black;
+  font-family: lato;
+}
+
+
+
+    </style>
+    <body>
+        <head>
+        <div class="topnav">
+            <div id="main">
+                <button class="openbtn" onclick="openNav()">☰</button>  
+                <img src="nrc-logo.png" class="image">
+               
+              </div>
+            
+         </div>
+         </head>
+        
+           
+        
+        <div id="mySidebar" class="sidebar">
+            <div class="div4"> 
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a> 
+            <input type="text" placeholder="Search" class="search" >
+            </div>
+            </br>
+            
+            
+            <a href="#">Home</a>
+            <a href="NRC Subwebportal1.html">ExpressRail</a>
+            <a href="NRC subwebportal2.html">CargoRail</a>
+            <a href="NRC Login.html">Login/Register</a>
+            <a href="#">Contact us</a>
+            <a href="#">Careers</a>
+            <a href="#">About us</a> 
+        </div>
+
+        
+
+      </br>
+
+      <h2 style="font-family: oswald; color: white; font-size: 40px; margin-top: 170px; margin-left: 20px;" class="lineUp">Charting a path to progress: </br> Empowering connectivity through rails.</h2>
+      
+
+
+        <div class="div1">
+          <img src="tgvduplex.jpg" class="image2">
+        </br>
+
+        <h2 style="font-family: lato; font-size: 45px; margin-inline: 40px; margin-top: 5px; color: rgb(1, 141, 255) ">NR ExpressRail</h2>
+        
+        <p style="font-family: lato; font-size: 18px; margin-inline: 40px;"><b>ExpressRail is our division managing passenger railroads and 
+          highspeed trains. Our ExpressRail fleet consists of famous rolling stock like the TGV Duplex and Talgo. Our trains operate at a top speed of 
+      350 kilometres per hour. ExpressRail is committed towards creating unforgettable experiences that blend elegance, efficiency and innovation.</b></p>
+        <button class="button1">Learn more</button>
+        </br>
+      
+    </div>
+    
+    <div class="div2">
+    <img src="freightloco.jpg" class="image3">
+    <h2 style="font-family: lato; font-size: 45px; margin-inline: 40px; margin-top: 5px; color: orangered  ">NR CargoRail</h2>
+    <p style="font-family: lato; font-size: 18px; margin-inline: 40px;"><b>CargoRail is our division managing and operating freight railroads
+           and freight trains. Our CargoRail locomotive fleet consists of powerful
+           and reliable locomotives from Alstom, EMD and General Electric that pull the
+           heaviest of our freight trains with ease. Our freight trains operate in
+           dedicated freight corridors ensuring faster and safer movement of your cargo.</b></p>
+           <button class="button1">Learn more</button>
+    </div>
+    
+  </br>
+</br>
+
+    <div class="div3">
+    </br>
+    <h2 style="font-family: lato; font-size: 45px; margin-inline: 40px; margin-top: 5px; color: rgb(0, 0, 0)">Latest@NR</h2>
+    <div class="accordion">
+      <div class="accordion-item">
+        <div class="accordion-header">18/07/2023<i class="fa fa-chevron-down"></i></div>
+        <div class="accordion-content">
+          <ul style="list-style-type: square;">
+          <li>New paid leave policy issued for NR staff w.e.f from 01/08/2023 <a href>read more></a></li>
+          <li>NR  HQ administrative staff meeting scheduled on 02/08/2023 <a href>read more></a></li>
+          
+          </ul>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header">17/07/2023<i class="fa fa-chevron-down"></i></div>
+        <div class="accordion-content">
+          <ul style="list-style-type: square;">
+          <li>Last date to submit CVs for assistant train operator post for CargoRail extended to 30/07/2023 <a href>read more></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header">16/07/2023<i class="fa fa-chevron-down"></i></div>
+        <div class="accordion-content">
+          <ul style="list-style-type: square;">
+            <li>Revised norms and guidelines issued for administrative and operative NR staff <a href>read more></a></li>
+            <li>Special training class for NR train operative staff scheduled on 27/07/2023 <a href>read more></a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Add more accordion items as needed -->
+    </div>
+  </body>
+  </html>
+  
+  
+  
+  
+  
+  
+  
+  </div> 
+    </body>
+
+
+           
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft= "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+
+const accordionHeaders = document.querySelectorAll(".accordion-header");
+
+    accordionHeaders.forEach(header => {
+      header.addEventListener("click", () => {
+        header.parentElement.classList.toggle("active");
+      });
+    });
+
+  
+
+
+
+</script>
+</html>
