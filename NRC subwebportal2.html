@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+
+.button{
+        background-color: rgba(132, 255, 0, 0.651);
+        color: rgb(255, 255, 255);
+        font-family: Oswald;
+        font-size: 20px;
+        border-radius: 30px;
+        width: 110px;
+        height: 50px;
+        border: none;
+      }
+
+      .button:hover {
+        background-color: red;
+      }
+
+      .button1 {
+        background-color:rgba(132, 255, 0, 0.651);
+        color: rgb(255, 255, 255);
+        font-family: Oswald;
+        font-size: 20px;
+        border-radius: 30px;
+        width: 110px;
+        height: 50px;
+        border: none;
+      }
+
+      .button1:hover {
+        background-color: red;
+      }
+
+
+
+        body{
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),url('freightloco.jpg'); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+
+  }
+
+  .sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fefefe;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: indigo;
+  display: block;
+  transition: 0.3s;
+  font-family: "lato" , sans-serif;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: white;
+}
+
+
+
+.openbtn {
+  font-size: 28px;
+  cursor: pointer;
+  color: black;
+  padding: 10px 15px;
+  border: none;
+  background-color: white;
+  
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+.topnav {
+    background-color: #ffffff;
+    overflow: auto;
+    margin-left: -5px;
+    width: 1280px;
+    margin-top: -8px;
+    position: fixed;
+    margin-left: -10px;
+    
+   
+}
+
+.image {
+    height: 40px;
+    width: 300px;
+    margin-left: 5px;
+    
+}
+
+.search {
+  width: 220px;
+  height: 25px;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-top: 100px;
+  border: 2px solid black;
+  font-family: lato;
+}
+  
+.div4 {
+  width: 250px;
+  height: 160px;
+  background-color: #444;
+  margin-top: -60px;
+  background-image: linear-gradient(blue, black, orangered);
+}    
+
+    .lineUp {
+  animation: 2s anim-lineUp ease-out;
+}
+@keyframes anim-lineUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+
+
+    </style>
+    <script>
+         function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft= "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+
+    </script>
+    <body>
+
+      <div class="topnav">
+        <div id="main">
+            <button class="openbtn" onclick="openNav()">☰</button>  
+            <img src="nrc-logo.png" class="image">
+           
+          </div>
+        
+     </div>
+     </head>
+    
+       
+    
+    <div id="mySidebar" class="sidebar">
+        <div class="div4"> 
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a> 
+        <input type="text" placeholder="Search" class="search" >
+        </div>
+        </br>
+        
+        
+        <a href="NRCwebportalnew.html">Home</a>
+        <a href="NRC Subwebportal1.html">ExpressRail</a>
+        <a href="#">CargoRail</a>
+        <a href="NRC Login.html">Login/Register</a>
+        <a href="#">Contact us</a>
+        <a href="#">Careers</a>
+        <a href="#">About us</a> 
+    </div>
+    
+  </br>
+  </br>
+  </br>
+  </br>
+    
+
+    <h1 style="font-family: Oswald; font-size: 55px; text-align: left; color: white;" class="lineUp">Welcome to CargoRail!</h1>
+    <p style="font-family: oswald; font-size: 25px; color: white;" class="lineUp">Connecting commerce, bridging distances.</p>
+
+    <button class="button" button onclick="window.location.href='C:/Users/Anant/Downloads/NR PROJECT FILE/NRC Login.html';">Log In</button>
+    <button class="button1" button onclick="window.location.href='C:/Users/Anant/Downloads/NR PROJECT FILE/NRC Registration.html';">Register</button>
+    </body>
+    </html>
