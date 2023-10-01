@@ -165,7 +165,20 @@
   }
 }
 
-
+.div9 {
+            width: 100%; /* Use full width on smaller screens */
+            max-width: 600px; /* Limit the maximum width */
+            margin: 0 auto; /* Center the div horizontally */
+            padding: 10px; /* Add some spacing */
+            border-radius: 20px;
+            background-color: red;
+        }
+@media (max-width: 600px) {
+            .div9 {
+                border-radius: 0; /* Remove border-radius on small screens */
+                background-color: blue;
+            }
+        }
 
     </style>
     <script>
@@ -222,5 +235,9 @@ function closeNav() {
 
     <button class="button" button onclick="window.location.href='NRC Login.html';">Log In</button>
     <button class="button1" button onclick="window.location.href='NRC Registration.html';">Register</button>
+
+        <div class="div">
+        <!-- Content for your responsive div goes here -->
+        </div>
     </body>
     </html>
